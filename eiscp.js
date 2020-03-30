@@ -54,7 +54,7 @@ function eiscp_packet_extract(packet) {
       Exracts message from eISCP packet
       Strip first 18 bytes and last 3 since that's only the header and end characters
     */
-    return packet.toString('ascii', 18, packet.length - 3);
+    return packet.toString('utf8', 18, packet.length - 3);
 }
 
 function iscp_to_command(iscp_message) {
